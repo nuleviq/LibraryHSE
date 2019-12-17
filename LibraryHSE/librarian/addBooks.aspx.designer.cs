@@ -11,7 +11,7 @@ namespace LibraryHSE.librarian
 {
 
 
-    public partial class test
+    public partial class addBooks
     {
     }
 }
