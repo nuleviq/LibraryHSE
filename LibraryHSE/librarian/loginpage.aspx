@@ -41,7 +41,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form id="f1" runat="server">
                         <div class="form-group">
                             <label>Username</label>
                             <input type="email" class="form-control" placeholder="Email">
