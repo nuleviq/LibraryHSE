@@ -37,22 +37,24 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
-                        <h1 style="color:white">Login for librarian </h1>
+                        <h1 style="color:brown">Login for librarian </h1>
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form id="f1" runat="server">
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <asp:TextBox ID="username" runat="server" class="form-control" placeholder="username"></asp:TextBox>
                             
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <asp:TextBox ID="password" runat="server" class="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
                         </div>
-                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
-                        <div class="alert alert-warning" role="alert" style="margin-top:15px">
+                        
+                        <asp:Button ID="b1" runat="server" Text="Sign in" class="btn btn-success btn-flat m-b-30 m-t-30" placeholder="username" OnClick="b1_Click"></asp:Button>
+
+                        <div class="alert alert-warning" role="alert" style="margin-top:15px; display:none" id="error" runat="server">
                             Invalid username or password!
                         </div> 
                     </form>
