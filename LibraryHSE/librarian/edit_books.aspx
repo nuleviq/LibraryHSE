@@ -7,11 +7,14 @@
     <title></title>    
 </head>
 <body>
-     <form id="form1" runat="server">
-         <div class="col-lg-12">
+    <form id="form1" runat="server">
+    </form>
+    <asp:Content ID="Content1" ContentPlaceHolderID="c1" Runat="Server">
+
+        <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Add New Books</strong>
+                            <strong class="card-title">Update Books</strong>
                         </div>
                         <div class="card-body">
                           <!-- Credit Card -->
@@ -45,7 +48,7 @@
 
                                       <div>
                                           
-                                          <asp:Button ID="b1" runat="server" class="btn btn-lg btn-info btn-block" Text="Add Books" OnClick="b1_click" />
+                                          <asp:Button ID="b1" runat="server" class="btn btn-lg btn-info btn-block" Text="Update Books" />
                                       </div>
                                   </form>
                               </div>
@@ -55,6 +58,6 @@
                     </div> <!-- .card -->
 
                   </div><!--/.col-->
-         </form>
+    </asp:Content> 
 </body>
 </html>

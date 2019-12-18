@@ -28,6 +28,7 @@
                                          <th scope="col">author name</th>
                                          <th scope="col">isbn</th>
                                          <th scope="col">avilable qty</th>
+                                         <th scope="col">Edit Books</th>
                                     </tr>
                                  </thead>
                                   <tbody>
@@ -41,6 +42,7 @@
                               <td><%#Eval("books_author_name") %></td>
                               <td><%#Eval("books_isbn") %></td>
                               <td><%#Eval("available_qty") %></td>
+                              <td><a href="edit_books.aspx?id=<%Eval("id")%>"Edit Books</a></td>
                           </tr>
                           </ItemTemplate>
                                 <FooterTemplate>
