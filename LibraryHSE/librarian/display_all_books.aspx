@@ -21,20 +21,26 @@
                           <HeaderTemplate> <table class="table">
                               <thead>
                                     <tr>
-                                         
+                                         <th scope="col">books image</th>
                                          <th scope="col">books title</th>
-                                         <th scope="col">Last</th>
-                                         <th scope="col">Handle</th>
+                                         <th scope="col">books pdf</th>
+                                         <th scope="col">books video</th>
+                                         <th scope="col">author name</th>
+                                         <th scope="col">isbn</th>
+                                         <th scope="col">avilable qty</th>
                                     </tr>
                                  </thead>
                                   <tbody>
                           </HeaderTemplate>
                           <ItemTemplate>
                               <tr>
-                              <td>1</td>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
+                              <td><img src="<%#Eval("books_image") %>" height="100" width="100"/></td>
+                              <td><%#Eval("books_title") %></td>
+                              <td><%#Eval("books_pdf") %></td>
+                              <td><%#Eval("books_video") %></td>
+                              <td><%#Eval("books_author_name") %></td>
+                              <td><%#Eval("books_isbn") %></td>
+                              <td><%#Eval("available_qty") %></td>
                           </tr>
                           </ItemTemplate>
                                 <FooterTemplate>
