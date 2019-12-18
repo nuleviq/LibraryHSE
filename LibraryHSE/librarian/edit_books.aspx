@@ -1,15 +1,5 @@
-﻿<%@ Page Language="C#" %>
-
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta charset="utf-8" />
-    <title></title>    
-</head>
-<body>
-    <form id="form1" runat="server">
-    </form>
-    <asp:Content ID="Content1" ContentPlaceHolderID="c1" Runat="Server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/librarian/librarian.Master" AutoEventWireup="true" CodeBehind="display_all_books.aspx.cs" Inherits="LibraryHSE.librarian.display_all_books" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
 
         <div class="col-lg-12">
                     <div class="card">
@@ -27,8 +17,21 @@
                                       </div>
                                       
                                       <div class="form-group">
-                                          <label for="" class="control-label mb-1">Books Image</label>
+                                          <label for="" class="control-label mb-1">Books Image</label><br />
+                                          <asp:Label ID="booksimage" runat="server" Text=""></asp:Label>
                                           <asp:FileUpload ID="f1" runat="server" class="form-control"/>
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label for="" class="control-label mb-1">Books Pdf</label><br />
+                                          <asp:Label ID="bookspdf" runat="server" Text=""></asp:Label>
+                                          <asp:FileUpload ID="FileUpload1" runat="server" class="form-control"/>
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label for="" class="control-label mb-1">Books Video</label><br />
+                                          <asp:Label ID="booksvideo" runat="server" Text=""></asp:Label>
+                                          <asp:FileUpload ID="FileUpload2" runat="server" class="form-control"/>
                                       </div>
                                      
                                       <div class="form-group">
@@ -59,5 +62,4 @@
 
                   </div><!--/.col-->
     </asp:Content> 
-</body>
-</html>
+

@@ -1,14 +1,7 @@
-﻿<%@ Page Language="C#" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/librarian/librarian.Master" AutoEventWireup="true" CodeBehind="add_books.aspx.cs" Inherits="LibraryHSE.librarian.add_books" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
 
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta charset="utf-8" />
-    <title></title>    
-</head>
-<body>
-     <form id="form1" runat="server">
-         <div class="col-lg-12">
+<div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
                             <strong class="card-title">Add New Books</strong>
@@ -55,6 +48,6 @@
                     </div> <!-- .card -->
 
                   </div><!--/.col-->
-         </form>
-</body>
-</html>
+</asp:Content>
+
+
