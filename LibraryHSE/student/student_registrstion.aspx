@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
+    <title>Student Registration Form</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,40 +41,79 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form id="form1" runat="server">
                         <div class="form-group">
-                            <label>User Name</label>
-                            <input type="email" class="form-control" placeholder="User Name">
+                            <label>First Name</label>
+                            <asp:TextBox ID="firstname" runat="server" class="form-control" placeholder="First Name" ></asp:TextBox>
                         </div>
+
                         <div class="form-group">
-                            <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <label>Last Name</label>
+                            <asp:TextBox ID="lastname" runat="server" class="form-control" placeholder="Last Name" ></asp:TextBox>
                         </div>
+
+                        <div class="form-group">
+                            <label>Enrollment No</label>
+                            <asp:TextBox ID="enrollment No" runat="server" class="form-control" placeholder="Enrollment No" ></asp:TextBox>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Username</label>
+                            <asp:TextBox ID="username" runat="server" class="form-control" placeholder="UserName" ></asp:TextBox>
+                        </div>
+
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <asp:TextBox ID="password" runat="server" class="form-control" placeholder="password" TextMode="Password" ></asp:TextBox>
                         </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Agree the terms and policy
-                            </label>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <asp:TextBox ID="email" runat="server" class="form-control" placeholder="email" ></asp:TextBox>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
-                        <div class="social-login-content">
-                            <div class="social-button">
-                                <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Register with facebook</button>
-                                <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Register with twitter</button>
-                            </div>
+
+                        <div class="form-group">
+                            <label>Phone No</label>
+                            <asp:TextBox ID="contact" runat="server" class="form-control" placeholder="contact" ></asp:TextBox>
                         </div>
-                        <div class="register-link m-t-15 text-center">
-                            <p>Already have account ? <a href="#"> Sign in</a></p>
+
+                        <div class="form-group">
+                            <label>select Image</label>
+                            <asp:FileUpload ID="f1" runat="server" />
                         </div>
+
+                        <div class="form-group">
+                            <div id="ReCaptchContainer"></div>
+        <asp:Label ID="lblMessage1" runat="server"></asp:Label>
+                        </div>
+
+                        <asp:Button ID="b1" runat="server" class="btn btn-primary btn-flat m-b-30 m-t-30" Text="Register Now" />
+                       
+                        
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
+    <script type="text/javascript">
+        var your_site_key = '6Le3d8gUAAAAABZqwwcMgMQfw5o_ScW-aLDDf8_G';
+        var renderRecaptcha = function () {
+            grecaptcha.render('ReCaptchContainer', {
+                'sitekey': '6Le3d8gUAAAAABZqwwcMgMQfw5o_ScW-aLDDf8_G',
+                'callback': reCaptchaCallback,
+                theme: 'light', //light or dark
+                type: 'image',// image or audio
+                size: 'normal'//normal or compact
+            });
+        };
+        var reCaptchaCallback = function (response) {
+            if (response !== '') {
+                document.getElementById('lblMessage1').innerHTML = "";
+            }
+        };
+       </script>
 
     <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
