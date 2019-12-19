@@ -11,12 +11,31 @@
         </div>
     </div>
     <div class="container-fluid" style="min-height:500px; background-color:white">
-        <asp:DataList ID="1d" runat="server">
+        <asp:DataList ID="d1" runat="server">
             <HeaderTemplate>
                 <table class="table table-bordered">
+                    <tr>
+                        <th>student_enrollment_no</th>
+                        <th>boooks_isbn</th>
+                        <th>books_issue_date</th>
+                        <th>books_approx_return_date</th>
+                        <th>student_username</th>
+                        <th>is_book_return</th>
+                        <th>books_return_date</th>
+                        <th>lateday</th>
+                    </tr>
             </HeaderTemplate>
             <ItemTemplate>
-
+                <tr>
+                    <td><%#Eval("student_enrollment_no") %></td>
+                    <td><%#Eval("books_isbn") %></td>
+                    <td><%#Eval("books_issue_date") %></td>
+                    <td><%#Eval("books_approx_return_date") %></td>
+                    <td><%#Eval("student_username") %></td>
+                    <td><%#Eval("is_book_return") %></td>
+                    <td><%#Eval("books_return_date") %></td>
+                    <td><%#Eval("lateday") %></td>
+                </tr>
             </ItemTemplate>
             
             <FooterTemplate>

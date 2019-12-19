@@ -15,12 +15,12 @@ namespace LibraryHSE.student1
     {
 
         /// <summary>
-        /// 1d control.
+        /// d1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList 1d;
+        protected global::System.Web.UI.WebControls.DataList d1;
     }
 }
