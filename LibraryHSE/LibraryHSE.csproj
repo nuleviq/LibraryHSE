@@ -182,6 +182,7 @@
     <Content Include="librarian\assets\scss\widgets.css" />
     <Content Include="librarian\delete_files.aspx" />
     <Content Include="librarian\display_all_books.aspx" />
+    <Content Include="librarian\display_student_info.aspx" />
     <Content Include="librarian\edit_books.aspx" />
     <Content Include="librarian\images\.gitignore" />
     <Content Include="librarian\images\admin.jpg" />
@@ -960,7 +961,12 @@
     <Content Include="librarian\images\logo.png" />
     <Content Include="librarian\images\logo2.png" />
     <Content Include="librarian\images\placeholder.png" />
+    <Content Include="librarian\images\twitter_corner_black.png" />
+    <Content Include="librarian\images\twitter_corner_blue.png" />
+    <Content Include="librarian\issue_books.aspx" />
     <Content Include="librarian\loginpage.aspx" />
+    <Content Include="librarian\student_active.aspx" />
+    <Content Include="librarian\student_deactive.aspx" />
     <Content Include="librarian\test.aspx" />
     <Content Include="student1\assets\css\animate.css" />
     <Content Include="student1\assets\css\bootstrap-select.css" />
@@ -1871,12 +1877,26 @@
     <Compile Include="librarian\display_all_books.aspx.designer.cs">
       <DependentUpon>display_all_books.aspx</DependentUpon>
     </Compile>
+    <Compile Include="librarian\display_student_info.aspx.cs">
+      <DependentUpon>display_student_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\display_student_info.aspx.designer.cs">
+      <DependentUpon>display_student_info.aspx</DependentUpon>
+    </Compile>
     <Compile Include="librarian\edit_books.aspx.cs">
       <DependentUpon>edit_books.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="librarian\edit_books.aspx.designer.cs">
       <DependentUpon>edit_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\issue_books.aspx.cs">
+      <DependentUpon>issue_books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\issue_books.aspx.designer.cs">
+      <DependentUpon>issue_books.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\librarian.Master.cs">
       <DependentUpon>librarian.Master</DependentUpon>
@@ -1891,6 +1911,20 @@
     </Compile>
     <Compile Include="librarian\loginpage.aspx.designer.cs">
       <DependentUpon>loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\student_active.aspx.cs">
+      <DependentUpon>student_active.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\student_active.aspx.designer.cs">
+      <DependentUpon>student_active.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\student_deactive.aspx.cs">
+      <DependentUpon>student_deactive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\student_deactive.aspx.designer.cs">
+      <DependentUpon>student_deactive.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
@@ -2336,8 +2370,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="librarian\books_pdf\" />
-    <Folder Include="librarian\books_videos\" />
+    <Folder Include="librarian\books_images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
