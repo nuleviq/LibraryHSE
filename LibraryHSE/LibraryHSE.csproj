@@ -2362,7 +2362,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="student1\student_img\" />
+    <Folder Include="librarian\books_images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
