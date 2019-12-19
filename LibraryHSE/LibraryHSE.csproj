@@ -966,6 +966,7 @@
     <Content Include="librarian\images\twitter_corner_blue.png" />
     <Content Include="librarian\issue_books.aspx" />
     <Content Include="librarian\loginpage.aspx" />
+    <Content Include="librarian\logout.aspx" />
     <Content Include="librarian\student_active.aspx" />
     <Content Include="librarian\student_deactive.aspx" />
     <Content Include="librarian\test.aspx" />
@@ -1872,6 +1873,13 @@
     </Compile>
     <Compile Include="librarian\add_penalty.aspx.designer.cs">
       <DependentUpon>add_penalty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\RandomPassword.cs" />
     <Compile Include="librarian\delete_files.aspx.cs">
