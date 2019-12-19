@@ -965,6 +965,8 @@
     <Content Include="librarian\issue_books.aspx" />
     <Content Include="librarian\loginpage.aspx" />
     <Content Include="librarian\logout.aspx" />
+    <Content Include="librarian\returnbook.aspx" />
+    <Content Include="librarian\return_books.aspx" />
     <Content Include="librarian\student_active.aspx" />
     <Content Include="librarian\student_deactive.aspx" />
     <Content Include="librarian\test.aspx" />
@@ -1929,6 +1931,20 @@
     </Compile>
     <Compile Include="librarian\loginpage.aspx.designer.cs">
       <DependentUpon>loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\returnbook.aspx.cs">
+      <DependentUpon>returnbook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\returnbook.aspx.designer.cs">
+      <DependentUpon>returnbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\return_books.aspx.cs">
+      <DependentUpon>return_books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\return_books.aspx.designer.cs">
+      <DependentUpon>return_books.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\student_active.aspx.cs">
       <DependentUpon>student_active.aspx</DependentUpon>
