@@ -963,6 +963,7 @@
     <Content Include="librarian\images\placeholder.png" />
     <Content Include="librarian\images\twitter_corner_black.png" />
     <Content Include="librarian\images\twitter_corner_blue.png" />
+    <Content Include="librarian\issue_books.aspx" />
     <Content Include="librarian\loginpage.aspx" />
     <Content Include="librarian\student_active.aspx" />
     <Content Include="librarian\student_deactive.aspx" />
@@ -1889,6 +1890,13 @@
     </Compile>
     <Compile Include="librarian\edit_books.aspx.designer.cs">
       <DependentUpon>edit_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\issue_books.aspx.cs">
+      <DependentUpon>issue_books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\issue_books.aspx.designer.cs">
+      <DependentUpon>issue_books.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\librarian.Master.cs">
       <DependentUpon>librarian.Master</DependentUpon>
