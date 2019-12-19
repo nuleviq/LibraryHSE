@@ -75,6 +75,7 @@
       <DependentUpon>lms.mdf</DependentUpon>
     </Content>
     <Content Include="librarian\add_books.aspx" />
+    <Content Include="librarian\add_penalty.aspx" />
     <Content Include="librarian\assets\css\animate.css" />
     <Content Include="librarian\assets\css\bootstrap-select.css" />
     <Content Include="librarian\assets\css\bootstrap.css" />
@@ -1850,6 +1851,7 @@
     <Content Include="student1\images\twitter_corner_black.png" />
     <Content Include="student1\images\twitter_corner_blue.png" />
     <Content Include="student1\my_issued_books.aspx" />
+    <Content Include="student1\student_display_all_books.aspx" />
     <Content Include="student1\student_login.aspx" />
     <Content Include="student1\student_registration.aspx" />
     <Content Include="Web.config" />
@@ -1861,6 +1863,13 @@
     </Compile>
     <Compile Include="librarian\add_books.aspx.designer.cs">
       <DependentUpon>add_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\add_penalty.aspx.cs">
+      <DependentUpon>add_penalty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\add_penalty.aspx.designer.cs">
+      <DependentUpon>add_penalty.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\RandomPassword.cs" />
     <Compile Include="librarian\delete_files.aspx.cs">
@@ -1947,6 +1956,13 @@
     </Compile>
     <Compile Include="student1\student.Master.designer.cs">
       <DependentUpon>student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="student1\student_display_all_books.aspx.cs">
+      <DependentUpon>student_display_all_books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student1\student_display_all_books.aspx.designer.cs">
+      <DependentUpon>student_display_all_books.aspx</DependentUpon>
     </Compile>
     <Compile Include="student1\student_login.aspx.cs">
       <DependentUpon>student_login.aspx</DependentUpon>
@@ -2378,6 +2394,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="librarian\books_images\" />
+    <Folder Include="librarian\books_pdf\" />
+    <Folder Include="librarian\books_videos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

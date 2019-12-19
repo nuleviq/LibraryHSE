@@ -11,16 +11,16 @@ namespace LibraryHSE.student1
 {
 
 
-    public partial class my_issued_books
+    public partial class student_display_all_books
     {
 
         /// <summary>
-        /// d1 control.
+        /// r1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList d1;
+        protected global::System.Web.UI.WebControls.Repeater r1;
     }
 }
