@@ -1847,6 +1847,7 @@
     <Content Include="student1\images\placeholder.png" />
     <Content Include="student1\images\twitter_corner_black.png" />
     <Content Include="student1\images\twitter_corner_blue.png" />
+    <Content Include="student1\student_registration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1906,6 +1907,13 @@
     </Compile>
     <Compile Include="student1\student.Master.designer.cs">
       <DependentUpon>student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="student1\student_registration.aspx.cs">
+      <DependentUpon>student_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student1\student_registration.aspx.designer.cs">
+      <DependentUpon>student_registration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
