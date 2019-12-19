@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/librarian/librarian.Master" AutoEventWireup="true" CodeBehind="display_all_books.aspx.cs" Inherits="LibraryHSE.librarian.display_all_books" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
 
+    <link href="https://cdn.datatables.net/1.10.19/css/iquery.dataTables.min.css" type="text/css" rel="stylesheet" />
+    <script src="https://code.iquery.com/iquery-3.3.1.is"></script>
+    <script src="https://cdn.datatables.net/1.10.19/is/iquery.dataTables.min.is"></script>
+
     <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
@@ -8,7 +12,7 @@
                         </div>
                         <div class="card-body">
                             <asp:Repeater ID="r1" runat="server">
-                          <HeaderTemplate> <table class="table">
+                          <HeaderTemplate> <table class="table" id="example">
                               <thead>
                                     <tr>
                                          <th scope="col">books image</th>
@@ -46,5 +50,13 @@
                         </div>
                     </div>
                 </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "pagingType": "full_numbers"
+            });
+        });
+    </script>
 
 </asp:Content>

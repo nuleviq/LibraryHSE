@@ -1,11 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/librarian/librarian.Master" AutoEventWireup="true" CodeBehind="display_student_info.aspx.cs" Inherits="LibraryHSE.librarian.display_student_info" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
 
+    <link href="https://cdn.datatables.net/1.10.19/css/iquery.dataTables.min.css" type="text/css" rel="stylesheet" />
+    <script src="https://code.iquery.com/iquery-3.3.1.is"></script>
+    <script src="https://cdn.datatables.net/1.10.19/is/iquery.dataTables.min.is"></script>
+
     <asp:Repeater ID="r1" runat="server">
 
         <HeaderTemplate>
 
-            <table>
+            <table class="table table-bordered" id="example">
+                <thead>
                 <tr>
                     <th>image</th>
                 <th>FirstName</th>
@@ -19,7 +24,8 @@
                     <th>Deactive</th>
 
                 </tr>
-
+                    </thead>
+                <tbody>
         </HeaderTemplate>
         
         
@@ -41,9 +47,18 @@
         
         
         <FooterTemplate>
+            </tbody>
             </table>
         </FooterTemplate>
 
     </asp:Repeater>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "pagingType": "full_numbers"
+            });
+        });
+    </script>
 
 </asp:Content>
