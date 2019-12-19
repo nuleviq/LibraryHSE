@@ -74,7 +74,6 @@
     <Content Include="App_Data\lms_log.ldf">
       <DependentUpon>lms.mdf</DependentUpon>
     </Content>
-    <Content Include="librarian\addBooks.aspx" />
     <Content Include="librarian\assets\css\animate.css" />
     <Content Include="librarian\assets\css\bootstrap-select.css" />
     <Content Include="librarian\assets\css\bootstrap.css" />
@@ -964,13 +963,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="librarian\addBooks.aspx.cs">
-      <DependentUpon>addBooks.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="librarian\addBooks.aspx.designer.cs">
-      <DependentUpon>addBooks.aspx</DependentUpon>
-    </Compile>
     <Compile Include="librarian\librarian.Master.cs">
       <DependentUpon>librarian.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
