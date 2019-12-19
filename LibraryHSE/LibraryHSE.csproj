@@ -2380,6 +2380,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="librarian\books_images\" />
+    <Folder Include="librarian\books_pdf\" />
+    <Folder Include="librarian\books_videos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
