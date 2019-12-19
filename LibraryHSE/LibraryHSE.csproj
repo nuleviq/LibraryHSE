@@ -182,6 +182,7 @@
     <Content Include="librarian\assets\scss\widgets.css" />
     <Content Include="librarian\delete_files.aspx" />
     <Content Include="librarian\display_all_books.aspx" />
+    <Content Include="librarian\edit_books.aspx" />
     <Content Include="librarian\images\.gitignore" />
     <Content Include="librarian\images\admin.jpg" />
     <Content Include="librarian\images\avatar\1.jpg" />
@@ -986,6 +987,13 @@
     </Compile>
     <Compile Include="librarian\display_all_books.aspx.designer.cs">
       <DependentUpon>display_all_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\edit_books.aspx.cs">
+      <DependentUpon>edit_books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\edit_books.aspx.designer.cs">
+      <DependentUpon>edit_books.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\librarian.Master.cs">
       <DependentUpon>librarian.Master</DependentUpon>
