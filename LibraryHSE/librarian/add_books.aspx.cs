@@ -23,8 +23,10 @@ namespace LibraryHSE.librarian
 
         protected void b1_Click(object sender, EventArgs e)
         {
-            
-
+            string books_image_name = RandomPassword.GetRandomPassword(10) + ".jpg";
+            string path = "";
+            f1.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_images/" + books_image_name.ToString());
+            path = "books_images/" + books_image_name.ToString();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "insert into books values('"+ booktitle.Text +"','"+ path.ToString() +"','"+ authorname.Text +"','"+ isbn.Text +"','"+ quantity.Text +"')";

@@ -1851,6 +1851,7 @@
     <Content Include="student1\images\placeholder.png" />
     <Content Include="student1\images\twitter_corner_black.png" />
     <Content Include="student1\images\twitter_corner_blue.png" />
+    <Content Include="student1\my_issued_books.aspx" />
     <Content Include="student1\student_login.aspx" />
     <Content Include="student1\student_registration.aspx" />
     <Content Include="Web.config" />
@@ -1863,6 +1864,7 @@
     <Compile Include="librarian\add_books.aspx.designer.cs">
       <DependentUpon>add_books.aspx</DependentUpon>
     </Compile>
+    <Compile Include="librarian\RandomPassword.cs" />
     <Compile Include="librarian\delete_files.aspx.cs">
       <DependentUpon>delete_files.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1934,6 +1936,13 @@
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="student1\my_issued_books.aspx.cs">
+      <DependentUpon>my_issued_books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student1\my_issued_books.aspx.designer.cs">
+      <DependentUpon>my_issued_books.aspx</DependentUpon>
+    </Compile>
     <Compile Include="student1\student.Master.cs">
       <DependentUpon>student.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
