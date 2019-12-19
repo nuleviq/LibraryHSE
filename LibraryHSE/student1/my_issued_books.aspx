@@ -23,6 +23,7 @@
                         <th>is_book_return</th>
                         <th>books_return_date</th>
                         <th>lateday</th>
+                        <th>Penalty ($)</th>
                     </tr>
             </HeaderTemplate>
             <ItemTemplate>
@@ -35,6 +36,7 @@
                     <td><%#Eval("is_book_return") %></td>
                     <td><%#Eval("books_return_date") %></td>
                     <td><%#Eval("lateday") %></td>
+                    <th><%#Eval("penalty") %></th>
                 </tr>
             </ItemTemplate>
             

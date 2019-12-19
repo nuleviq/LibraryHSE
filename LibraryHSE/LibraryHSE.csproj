@@ -1853,6 +1853,7 @@
     <Content Include="student1\images\twitter_corner_black.png" />
     <Content Include="student1\images\twitter_corner_blue.png" />
     <Content Include="student1\my_issued_books.aspx" />
+    <Content Include="student1\student_display_all_books.aspx" />
     <Content Include="student1\student_login.aspx" />
     <Content Include="student1\student_registration.aspx" />
     <Content Include="Web.config" />
@@ -1957,6 +1958,13 @@
     </Compile>
     <Compile Include="student1\student.Master.designer.cs">
       <DependentUpon>student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="student1\student_display_all_books.aspx.cs">
+      <DependentUpon>student_display_all_books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="student1\student_display_all_books.aspx.designer.cs">
+      <DependentUpon>student_display_all_books.aspx</DependentUpon>
     </Compile>
     <Compile Include="student1\student_login.aspx.cs">
       <DependentUpon>student_login.aspx</DependentUpon>
