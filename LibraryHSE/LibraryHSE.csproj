@@ -75,6 +75,7 @@
       <DependentUpon>lms.mdf</DependentUpon>
     </Content>
     <Content Include="librarian\add_books.aspx" />
+    <Content Include="librarian\add_penalty.aspx" />
     <Content Include="librarian\assets\css\animate.css" />
     <Content Include="librarian\assets\css\bootstrap-select.css" />
     <Content Include="librarian\assets\css\bootstrap.css" />
@@ -1863,6 +1864,13 @@
     </Compile>
     <Compile Include="librarian\add_books.aspx.designer.cs">
       <DependentUpon>add_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="librarian\add_penalty.aspx.cs">
+      <DependentUpon>add_penalty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\add_penalty.aspx.designer.cs">
+      <DependentUpon>add_penalty.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\RandomPassword.cs" />
     <Compile Include="librarian\delete_files.aspx.cs">
