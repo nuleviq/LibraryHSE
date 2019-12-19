@@ -24,12 +24,35 @@ namespace LibraryHSE.librarian
         protected void b1_Click(object sender, EventArgs e)
         {
             string books_image_name = RandomPassword.GetRandomPassword(10) + ".jpg";
+            string books_pdf = "";
+            string books_videos = "";
             string path = "";
+            string path2 = "";
+            string path3 = "";
             f1.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_images/" + books_image_name.ToString());
             path = "books_images/" + books_image_name.ToString();
+
+            if (f2.FileName.ToString() != "")
+            {
+                books_pdf = RandomPassword.GetRandomPassword(10) + ".pfd";  
+                
+                f2.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_pdf/" + books_pdf.ToString());
+                path2 = "books_pdf/" + books_pdf.ToString();
+            }
+            if (f3.FileName.ToString() != "")
+            {
+                books_videos = RandomPassword.GetRandomPassword(10) + ".mp4";
+                 
+                f3.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_videos/" + books_videos.ToString());
+                path3 = "books_videos/" + books_videos.ToString();
+            } 
+
+
+
+
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into books values('"+ booktitle.Text +"','"+ path.ToString() +"','"+ authorname.Text +"','"+ isbn.Text +"','"+ quantity.Text +"')";
+            cmd.CommandText = "insert into books values('"+ booktitle.Text +"','"+ path.ToString() +"','"+ path2.ToString() + "','" + path3.ToString() +  authorname.Text +"','"+ isbn.Text +"','"+ quantity.Text +"')";
             cmd.ExecuteNonQuery();
             msg.Style.Add("display", "block");
 
