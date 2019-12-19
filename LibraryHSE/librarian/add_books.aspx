@@ -20,6 +20,14 @@
                                 <asp:FileUpload ID="f1" runat="server" class="form-control" />
                             </div>
                             <div class="form-group">
+                                <label for="" class="control-label mb-1">Pdf</label>
+                                <asp:FileUpload ID="f2" runat="server" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label mb-1">Video</label>
+                                <asp:FileUpload ID="f3" runat="server" class="form-control" />
+                            </div>
+                            <div class="form-group">
                                 <label for="" class="control-label mb-1">Author Name</label>
                                 <asp:TextBox ID="authorname" runat="server" class="form-control"></asp:TextBox>
                             </div>

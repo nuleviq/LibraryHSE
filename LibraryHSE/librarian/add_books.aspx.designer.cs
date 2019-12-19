@@ -42,6 +42,24 @@ namespace LibraryHSE.librarian
         protected global::System.Web.UI.WebControls.FileUpload f1;
 
         /// <summary>
+        /// f2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload f2;
+
+        /// <summary>
+        /// f3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload f3;
+
+        /// <summary>
         /// authorname control.
         /// </summary>
         /// <remarks>

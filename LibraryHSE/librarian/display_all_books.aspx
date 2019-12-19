@@ -7,7 +7,6 @@
                             <strong class="card-title">Basic Table</strong>
                         </div>
                         <div class="card-body">
-
                             <asp:Repeater ID="r1" runat="server">
                           <HeaderTemplate> <table class="table">
                               <thead>
@@ -44,10 +43,6 @@
                                 </FooterTemplate>
 
                             </asp:Repeater>
-                           
-                          
-                         
-                     
                         </div>
                     </div>
                 </div>

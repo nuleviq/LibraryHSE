@@ -1864,6 +1864,7 @@
     <Compile Include="librarian\add_books.aspx.designer.cs">
       <DependentUpon>add_books.aspx</DependentUpon>
     </Compile>
+    <Compile Include="librarian\RandomPassword.cs" />
     <Compile Include="librarian\delete_files.aspx.cs">
       <DependentUpon>delete_files.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
