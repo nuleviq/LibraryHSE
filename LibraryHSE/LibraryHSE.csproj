@@ -960,8 +960,6 @@
     <Content Include="librarian\images\logo.png" />
     <Content Include="librarian\images\logo2.png" />
     <Content Include="librarian\images\placeholder.png" />
-    <Content Include="librarian\images\twitter_corner_black.png" />
-    <Content Include="librarian\images\twitter_corner_blue.png" />
     <Content Include="librarian\loginpage.aspx" />
     <Content Include="librarian\test.aspx" />
     <Content Include="student1\assets\css\animate.css" />
@@ -2336,6 +2334,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="librarian\books_pdf\" />
+    <Folder Include="librarian\books_videos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

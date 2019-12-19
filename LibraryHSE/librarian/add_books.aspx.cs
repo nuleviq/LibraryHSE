@@ -23,9 +23,8 @@ namespace LibraryHSE.librarian
 
         protected void b1_Click(object sender, EventArgs e)
         {
-            string path = "";
-            f1.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_images/" + f1.FileName.ToString());
-            path = "books_images/" + f1.FileName.ToString(); 
+            
+
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "insert into books values('"+ booktitle.Text +"','"+ path.ToString() +"','"+ authorname.Text +"','"+ isbn.Text +"','"+ quantity.Text +"')";
