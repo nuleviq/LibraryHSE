@@ -24,13 +24,13 @@ namespace LibraryHSE.librarian
         protected global::System.Web.UI.HtmlControls.HtmlForm fo1;
 
         /// <summary>
-        /// bookstitle control.
+        /// booktitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bookstitle;
+        protected global::System.Web.UI.WebControls.TextBox booktitle;
 
         /// <summary>
         /// f1 control.
@@ -60,13 +60,13 @@ namespace LibraryHSE.librarian
         protected global::System.Web.UI.WebControls.TextBox isbn;
 
         /// <summary>
-        /// qty control.
+        /// quantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox qty;
+        protected global::System.Web.UI.WebControls.TextBox quantity;
 
         /// <summary>
         /// b1 control.
@@ -76,5 +76,23 @@ namespace LibraryHSE.librarian
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button b1;
+
+        /// <summary>
+        /// msg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl msg;
+
+        /// <summary>
+        /// error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl error;
     }
 }
