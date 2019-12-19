@@ -28,9 +28,10 @@ namespace LibraryHSE.librarian
             path = "books_images/" + f1.FileName.ToString(); 
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "";
+            cmd.CommandText = "insert into books values('"+ booktitle.Text +"','"+ path.ToString() +"','"+ authorname.Text +"','"+ isbn.Text +"','"+ quantity.Text +"')";
             cmd.ExecuteNonQuery();
             msg.Style.Add("display", "block");
+
         }
     }
 }
