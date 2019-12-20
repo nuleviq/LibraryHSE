@@ -23,12 +23,14 @@ namespace LibraryHSE.student
             con.Open();
 
         }
-        protected void b1_Click(object sender, EventArgs e)
+        
+        protected void b1_Click1(object sender, EventArgs e)
         {
             int i = 0;
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from student_registration where username='" + username.Text + "' and password='" + password.Text + "' and approved='yes'";
+            cmd.CommandText = "SELECT [Id], [firstname], [lastname], [enrollment_no], [username], [password], [email]," +
+                        "[contact], [student_img], [approved] FROM [student_registration] WHERE [username]='" + username.Text + "' AND [password]='" + password.Text + "' AND [approved]='yes'";
             cmd.ExecuteNonQuery();
             DataTable dataTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
