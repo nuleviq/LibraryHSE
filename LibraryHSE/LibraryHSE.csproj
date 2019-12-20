@@ -1882,6 +1882,13 @@
     <Compile Include="librarian\add_penalty.aspx.designer.cs">
       <DependentUpon>add_penalty.aspx</DependentUpon>
     </Compile>
+    <Compile Include="librarian\delete_files.aspx.cs">
+      <DependentUpon>delete_files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="librarian\delete_files.aspx.designer.cs">
+      <DependentUpon>delete_files.aspx</DependentUpon>
+    </Compile>
     <Compile Include="librarian\logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1890,13 +1897,6 @@
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="librarian\RandomPassword.cs" />
-    <Compile Include="librarian\delete_files.aspx.cs">
-      <DependentUpon>delete_files.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="librarian\delete_files.aspx.designer.cs">
-      <DependentUpon>delete_files.aspx</DependentUpon>
-    </Compile>
     <Compile Include="librarian\display_all_books.aspx.cs">
       <DependentUpon>display_all_books.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
