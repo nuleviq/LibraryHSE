@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryHSE.student1
+namespace LibraryHSE.student
 {
 
 

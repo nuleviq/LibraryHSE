@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Student Registration Form</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="description" content="Student Registration">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
@@ -98,10 +98,10 @@
 
     <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
     <script type="text/javascript">
-        var your_site_key = '6Le3d8gUAAAAABZqwwcMgMQfw5o_ScW-aLDDf8_G';
+        var your_site_key = '6Lew3MgUAAAAAAMPm2cgAhUGO3srXeDAaNKUvWe2';
         var renderRecaptcha = function () {
             grecaptcha.render('ReCaptchContainer', {
-                'sitekey': '6Le3d8gUAAAAABZqwwcMgMQfw5o_ScW-aLDDf8_G',
+                'sitekey': '6Lew3MgUAAAAAAMPm2cgAhUGO3srXeDAaNKUvWe2',
                 'callback': reCaptchaCallback,
                 theme: 'light', //light or dark
                 type: 'image',// image or audio

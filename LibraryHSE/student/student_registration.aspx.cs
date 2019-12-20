@@ -6,8 +6,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using Newtonsoft.Json.Linq;
+using System.Configuration;
+using System.Net;
+using System.IO;
 
-namespace LibraryHSE.student1
+namespace LibraryHSE.student
 {
     public partial class student_registration : System.Web.UI.Page
     {
@@ -17,4 +21,5 @@ namespace LibraryHSE.student1
 
         }
     }
+    
 }
