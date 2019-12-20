@@ -22,27 +22,53 @@ namespace LibraryHSE.student
             {
                 con.Close();
             }
-            con.Open()
+            con.Open();
         }
 
         protected void b1_Click(object sender, EventArgs e)
         {
-            string randomno = RandomPassword.GetRandomPassword(10) + ".jpg";
-            string path = "";
-            f1.SaveAs(Request.PhysicalApplicationPath + "/student/student_img/" + randomno.ToString());
-            path = "student/student_img." + randomno.ToString();
-           
+            if (IsReCaptchValid())
+            {
+                string randomno = RandomPassword.GetRandomPassword(10) + ".jpg";
+                string path = "";
+                f1.SaveAs(Request.PhysicalApplicationPath + "/student/student_img/" + randomno.ToString());
+                path = "student/student_img." + randomno.ToString();
+
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO [student_registration] VALUES ('" + firstname.Text + "','" + lastname.Text + "','" + enrollmentno.Text + "','" +
+                    username.Text + "','" + password.Text + "','" + email.Text + "','" + contact.Text + "','" + path.ToString() + "','no')"; ;
+                cmd.ExecuteNonQuery();
+
+                Response.Write("<script>alert('record inserted successfully');</script>");
+            }
+            else
+            {
+                lblMessage1.Text = "this is invalid";
+            }
             
 
 
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "";
-            cmd.ExecuteNonQuery();
+        }
+        public bool IsReCaptchValid()
+        {
+            var result = false;
+            var captchaResponse = Request.Form["g-recaptcha-response"];
+            var secretKey = "secretkeyfromgoogle";
+            var apiUrl = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
+            var requestUri = string.Format(apiUrl, secretKey, captchaResponse);
+            var request = (HttpWebRequest)WebRequest.Create(requestUri);
 
-            Response.Write("<script>alert('record inserted successfully');</script>");
-
-
+            using (WebResponse response = request.GetResponse())
+            {
+                using (StreamReader stream = new StreamReader(response.GetResponseStream()))
+                {
+                    JObject jResponse = JObject.Parse(stream.ReadToEnd());
+                    var isSuccess = jResponse.Value<bool>("success");
+                    result = (isSuccess) ? true : false;
+                }
+            }
+            return result;
         }
     }
     

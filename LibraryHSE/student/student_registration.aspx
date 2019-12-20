@@ -1,10 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="student_registration.aspx.cs" Inherits="LibraryHSE.student1.student_registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="student_registration.aspx.cs" Inherits="LibraryHSE.student.student_registration" %>
 
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,52 +46,52 @@
                     <form id="form1" runat="server">
                         <div class="form-group">
                             <label>First Name</label>
-                            <asp:TextBox ID="firstname" runat="server" class="form-control" placeholder="First Name" ></asp:TextBox>
+                            <asp:TextBox ID="firstname" runat="server" class="form-control" placeholder="First Name"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
                             <label>Last Name</label>
-                            <asp:TextBox ID="lastname" runat="server" class="form-control" placeholder="Last Name" ></asp:TextBox>
+                            <asp:TextBox ID="lastname" runat="server" class="form-control" placeholder="Last Name"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
                             <label>Enrollment No</label>
-                            <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Enrollment No" ></asp:TextBox>
+                            <asp:TextBox ID="enrollmentno" runat="server" class="form-control" placeholder="Enrollment No"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
                             <label>Username</label>
-                            <asp:TextBox ID="username" runat="server" class="form-control" placeholder="UserName" ></asp:TextBox>
+                            <asp:TextBox ID="username" runat="server" class="form-control" placeholder="UserName"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
                             <label>Password</label>
-                            <asp:TextBox ID="password" runat="server" class="form-control" placeholder="password" TextMode="Password" ></asp:TextBox>
+                            <asp:TextBox ID="password" runat="server" class="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
                             <label>Email</label>
-                            <asp:TextBox ID="email" runat="server" class="form-control" placeholder="email" ></asp:TextBox>
+                            <asp:TextBox ID="email" runat="server" class="form-control" placeholder="email"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
                             <label>Phone No</label>
-                            <asp:TextBox ID="contact" runat="server" class="form-control" placeholder="contact" ></asp:TextBox>
+                            <asp:TextBox ID="contact" runat="server" class="form-control" placeholder="contact"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
-                            <label>select Image</label>
-                            <asp:FileUpload ID="f1" runat="server" />
+                            <label>Select Image</label>
+                            <asp:FileUpload  ID="f1" runat="server" />
                         </div>
 
                         <div class="form-group">
                             <div id="ReCaptchContainer"></div>
-        <asp:Label ID="lblMessage1" runat="server"></asp:Label>
+                            <asp:Label ID="lblMessage1" runat="server"></asp:Label>
                         </div>
 
                         <asp:Button ID="b1" runat="server" class="btn btn-primary btn-flat m-b-30 m-t-30" Text="Register Now" OnClick="b1_Click" />
-                       
-                        
+
+
                     </form>
                 </div>
             </div>
@@ -113,7 +115,7 @@
                 document.getElementById('lblMessage1').innerHTML = "";
             }
         };
-       </script>
+    </script>
 
     <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
