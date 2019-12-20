@@ -25,7 +25,7 @@ namespace LibraryHSE.librarian
             enrno.Items.Clear();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select enrollment_no from student_registration";
+            cmd.CommandText = "select [enrollment_no] from [student_registration]";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -40,7 +40,7 @@ namespace LibraryHSE.librarian
             isbn.Items.Add("Select");
             SqlCommand cmd2 = con.CreateCommand();
             cmd2.CommandType = CommandType.Text;
-            cmd2.CommandText = "select books_isbn from books";
+            cmd2.CommandText = "select [books_isbn] from [books]";
             cmd2.ExecuteNonQuery();
             DataTable dt2 = new DataTable();
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
@@ -69,7 +69,9 @@ namespace LibraryHSE.librarian
                 int found = 0;
                 SqlCommand cmd0 = con.CreateCommand();
                 cmd0.CommandType = CommandType.Text;
-                cmd0.CommandText = "select * from issue_books where student_enrollment_no='" + enrno.SelectedItem.ToString() + "' and books_isbn'" + isbn.SelectedItem.ToString() + "' and is_books_retirn='no'";
+                cmd0.CommandText = "SELECT [Id], [student_enrollment_no], [books_isbn], [books_issue_date]," +
+                " [books_approx_return_date], [student_username], [is_books_return]," +
+                        "[books_returned_date] FROM [issue_books] where [student_enrollment_no]='" + enrno.SelectedItem.ToString() + "' and [books_isbn]'" + isbn.SelectedItem.ToString() + "' and [is_books_retirn]='no'";
                 cmd0.ExecuteNonQuery();
                 DataTable dt0 = new DataTable();
                 SqlDataAdapter da0 = new SqlDataAdapter(cmd0);
@@ -98,7 +100,8 @@ namespace LibraryHSE.librarian
                         string username = "";
                         SqlCommand cmd2 = con.CreateCommand();
                         cmd2.CommandType = CommandType.Text;
-                        cmd2.CommandText = "select * from student_registration where enrollment_no ='" + enrno.SelectedItem.ToString() + "'";
+                        cmd2.CommandText = "select [Id], [firstname], [lastname], [enrollment_no], [username]," +
+                            "[password], [email], [contact], [student_img], [approved] from [student_registration] where [enrollment_no] ='" + enrno.SelectedItem.ToString() + "'";
                         cmd2.ExecuteNonQuery();
                         DataTable dt2 = new DataTable();
                         SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
@@ -111,14 +114,14 @@ namespace LibraryHSE.librarian
 
                         SqlCommand cmd3 = con.CreateCommand();
                         cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "insert into issue_books values('" + enrno.SelectedItem.ToString() + "','" + isbn.SelectedItem.ToString() + "','" + books_issue_date.ToString() + "','" + approx_return_date.ToString() + "','" + username.ToString() + "','no','no')";
+                        cmd3.CommandText = "insert into [issue_books] values('" + enrno.SelectedItem.ToString() + "','" + isbn.SelectedItem.ToString() + "','" + books_issue_date.ToString() + "','" + approx_return_date.ToString() + "','" + username.ToString() + "','no','no')";
                         cmd3.ExecuteNonQuery();
 
 
 
                         SqlCommand cmd4 = con.CreateCommand();
                         cmd4.CommandType = CommandType.Text;
-                        cmd4.CommandText = "update books set available_qty-1 where books_isbn='" + isbn.SelectedItem.ToString() + "'";
+                        cmd4.CommandText = "update [books] set available_qty-1 where [books_isbn]='" + isbn.SelectedItem.ToString() + "'";
                         cmd4.ExecuteNonQuery();
                         Response.Write("<script>alert('books issues successfully'); window.location.href=window.location.href;</script>");
                     }
