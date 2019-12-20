@@ -27,9 +27,12 @@ namespace LibraryHSE.student
 
         protected void b1_Click(object sender, EventArgs e)
         {
-            int count = 0;
+            int count_enrollment = 0;
+            int count_username = 0;
             if (IsReCaptchValid())
             {
+
+                //sql command for checking unique enrollment number
                 SqlCommand cmd1 = con.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
                 cmd1.CommandText = "SELECT [Id], [firstname], [lastname], [enrollment_no], [username], [password], [email]," +
@@ -38,26 +41,45 @@ namespace LibraryHSE.student
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
                 da1.Fill(dt1);
-                count = Convert.ToInt32(dt1.Rows.Count.ToString());
+                count_enrollment = Convert.ToInt32(dt1.Rows.Count.ToString());
 
-                if (count > 0)
+
+
+                // checking unique enrollment number
+                if (count_enrollment > 0)
                 {
                     Response.Write("<script>alert('This enrollment number is already exist');</script>");
                 }
                 else
                 {
+                    //sql command for checking unique username
+                    SqlCommand cmd2 = con.CreateCommand();
+                    cmd1.CommandType = CommandType.Text;
+                    cmd1.CommandText = "SELECT [Id], [firstname], [lastname], [enrollment_no], [username], [password], [email]," +
+                        "[contact], [student_img], [approved] FROM [student_registration] WHERE [username]='" + username.Text + "'";
+                    cmd1.ExecuteNonQuery();
+                    DataTable dt2 = new DataTable();
+                    SqlDataAdapter da2 = new SqlDataAdapter(cmd1);
+                    da1.Fill(dt2);
+                    count_username = Convert.ToInt32(dt2.Rows.Count.ToString());
                     string randomno = RandomPassword.GetRandomPassword(10) + ".jpg";
                     string path = "";
                     f1.SaveAs(Request.PhysicalApplicationPath + "/student/student_img/" + randomno.ToString());
                     path = "student/student_img." + randomno.ToString();
+                    if (count_username > 0)
+                    {
+                        Response.Write("<script>alert('This username already exist, please try again');</script>");
+                    }
+                    else
+                    {
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "INSERT INTO [student_registration] VALUES ('" + firstname.Text + "','" + lastname.Text + "','" + enrollmentno.Text + "','" +
+                            username.Text + "','" + password.Text + "','" + email.Text + "','" + contact.Text + "','" + path.ToString() + "','no')"; ;
+                        cmd.ExecuteNonQuery();
 
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "INSERT INTO [student_registration] VALUES ('" + firstname.Text + "','" + lastname.Text + "','" + enrollmentno.Text + "','" +
-                        username.Text + "','" + password.Text + "','" + email.Text + "','" + contact.Text + "','" + path.ToString() + "','no')"; ;
-                    cmd.ExecuteNonQuery();
-
-                    Response.Write("<script>alert('Record inserted successfully');</script>");
+                        Response.Write("<script>alert('Record inserted successfully');</script>");
+                    }
                 }
                 
             }
