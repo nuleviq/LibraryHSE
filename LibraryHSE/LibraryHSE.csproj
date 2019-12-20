@@ -181,6 +181,13 @@
     <Content Include="librarian\assets\scss\style.css" />
     <Content Include="librarian\assets\scss\variables.css" />
     <Content Include="librarian\assets\scss\widgets.css" />
+    <Content Include="librarian\books_images\dorian.jpg" />
+    <Content Include="librarian\books_images\gGzZ8y0CXW.jpg" />
+    <Content Include="librarian\books_images\GlvcFpjhHo.jpg" />
+    <Content Include="librarian\books_images\NTZdXsMjpE.jpg" />
+    <Content Include="librarian\books_images\UO5QL8Ns24.jpg" />
+    <Content Include="librarian\books_images\vWzGIMAUYw.jpg" />
+    <Content Include="librarian\books_images\vXEeUwSf4V.jpg" />
     <Content Include="librarian\delete_files.aspx" />
     <Content Include="librarian\display_all_books.aspx" />
     <Content Include="librarian\display_student_info.aspx" />
@@ -2393,9 +2400,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="librarian\books_images\" />
     <Folder Include="librarian\books_pdf\" />
     <Folder Include="librarian\books_videos\" />
+    <Folder Include="librarian\NewFolder1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

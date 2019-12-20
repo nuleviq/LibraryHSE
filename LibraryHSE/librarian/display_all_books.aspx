@@ -26,16 +26,16 @@
                           </HeaderTemplate>
                           <ItemTemplate>
                               <tr>
-                              <td><img src="<%#Eval("books_image") %>" height="100" width="100"/></td>
-                              <td><%#Eval("books_title") %></td>
-                              <td><%#Eval("books_pdf") %> </td>
-                              <td><%#Eval("books_video") %> </td>
-                              <td><%#Eval("books_author_name") %></td>
-                              <td><%#Eval("books_isbn") %></td>
-                              <td><%#Eval("available_qty") %></td>
-                              <td><a href="edit_books.aspx?id=<%# Eval("id")%>"Edit Books</a></td>
-                              <td><a href="delete_files.aspx?id2=<%# Eval("id")%>"Delete Books</a></td>
-                          </tr>
+                                  <td><img src="<%#Eval("books_image")%>" height="100" width="100"/></td>
+                                  <td><%#Eval("books_title") %></td>
+                                  <td><%#Eval("books_pdf") %> </td>
+                                  <td><%#Eval("books_video") %> </td>
+                                  <td><%#Eval("books_author_name") %></td>
+                                  <td><%#Eval("books_isbn") %></td>
+                                  <td><%#Eval("avaliable_qty") %></td>
+                                  <td><a href="edit_books.aspx?id=<%# Eval("Id")%>">Edit Book</a></td>
+                                  <td><a href="delete_files.aspx?id2=<%# Eval("Id")%>">Delete Book</a></td>
+                              </tr>
                           </ItemTemplate>
                                 <FooterTemplate>
                                     </tbody>

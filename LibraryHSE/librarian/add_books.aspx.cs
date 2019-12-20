@@ -23,36 +23,31 @@ namespace LibraryHSE.librarian
 
         protected void b1_Click(object sender, EventArgs e)
         {
-            string books_image_name = RandomPassword.GetRandomPassword(10) + ".jpg";
-            string books_pdf = "";
-            string books_videos = "";
+            string book_image_name = RandomPassword.GetRandomPassword(10) + ".jpg";
+            string book_pdf = "";
+            string book_video = "";
             string path = "";
             string path2 = "";
             string path3 = "";
-            f1.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_images/" + books_image_name.ToString());
-            path = "books_images/" + books_image_name.ToString();
+            f1.SaveAs(Request.PhysicalApplicationPath.ToString() + "/librarian/books_images/" + book_image_name.ToString());
+            path = "books_images/" + book_image_name.ToString();
 
             if (f2.FileName.ToString() != "")
             {
-                books_pdf = RandomPassword.GetRandomPassword(10) + ".pfd";  
-                
-                f2.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_pdf/" + books_pdf.ToString());
-                path2 = "books_pdf/" + books_pdf.ToString();
+                book_pdf = RandomPassword.GetRandomPassword(10) + ".pdf ";  
+                f2.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_pdf/" + book_pdf.ToString());
+                path2 = "books_pdf/" + book_pdf.ToString();
             }
             if (f3.FileName.ToString() != "")
             {
-                books_videos = RandomPassword.GetRandomPassword(10) + ".mp4";
-                 
-                f3.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_videos/" + books_videos.ToString());
-                path3 = "books_videos/" + books_videos.ToString();
+                book_video = RandomPassword.GetRandomPassword(10) + ".mp4";
+                f3.SaveAs(Request.PhysicalApplicationPath + "/librarian/books_videos/" + book_video.ToString());
+                path3 = "books_videos/" + book_video.ToString();
             } 
-
-
-
 
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into books values('"+ booktitle.Text +"','"+ path.ToString() +"','"+ path2.ToString() + "','" + path3.ToString() +  authorname.Text +"','"+ isbn.Text +"','"+ quantity.Text +"')";
+            cmd.CommandText = "insert into books values('"+ booktitle.Text +"','"+ path +"','"+ path2 + "','" + path3 + "','" + authorname.Text +"','"+ isbn.Text +"','"+ quantity.Text +"')";
             cmd.ExecuteNonQuery();
             msg.Style.Add("display", "block");
 
