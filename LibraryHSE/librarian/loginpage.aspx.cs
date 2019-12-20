@@ -26,7 +26,8 @@ namespace LibraryHSE.librarian
             int i = 0;
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from librarian_registration where username='"+ username.Text +"' and password='"+ password.Text +"'";
+            cmd.CommandText = "select [Id], [firstname], [lastname], [username], [password], [email], [contact]" +
+                " from [librarian_registration] where [username]='"+ username.Text +"' and [password]='"+ password.Text +"'";
             cmd.ExecuteNonQuery();
             DataTable dataTable = new DataTable();
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);

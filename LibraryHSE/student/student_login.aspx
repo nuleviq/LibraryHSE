@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="student_login.aspx.cs" Inherits="LibraryHSE.student1.student_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="student_login.aspx.cs" Inherits="LibraryHSE.student.student_login" %>
 
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Student Login</title>
-    <meta name="description" content="Librarian login">
+    <meta name="description" content="Student login">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
@@ -52,7 +52,7 @@
                             <asp:TextBox ID="password" runat="server" class="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
                         </div>
                         
-                        <asp:Button ID="b1" runat="server" Text="Sign in" class="btn btn-success btn-flat m-b-30 m-t-30"  ></asp:Button><br />
+                        <asp:Button ID="b1" runat="server" Text="Sign in" class="btn btn-success btn-flat m-b-30 m-t-30" OnClick="b1_Click1"  ></asp:Button><br />
                         <center><a href="student_registration.aspx">Register now!</a></center>
 
                         <div class="alert alert-warning" role="alert" style="margin-top:15px; display:none" id="error" runat="server">

@@ -55,13 +55,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Enrollment No</label>
-                            <asp:TextBox ID="enrollmentno" runat="server" class="form-control" placeholder="Enrollment No"></asp:TextBox>
+                            <label>Enrollment number</label>
+                            <asp:TextBox ID="enrollmentno" runat="server" class="form-control" placeholder="enrollment number"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
                             <label>Username</label>
-                            <asp:TextBox ID="username" runat="server" class="form-control" placeholder="UserName"></asp:TextBox>
+                            <asp:TextBox ID="username" runat="server" class="form-control" placeholder="username"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
@@ -70,12 +70,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Email</label>
+                            <label>email</label>
                             <asp:TextBox ID="email" runat="server" class="form-control" placeholder="email"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
-                            <label>Phone No</label>
+                            <label>Phone Number</label>
                             <asp:TextBox ID="contact" runat="server" class="form-control" placeholder="contact"></asp:TextBox>
                         </div>
 

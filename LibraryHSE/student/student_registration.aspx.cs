@@ -27,24 +27,65 @@ namespace LibraryHSE.student
 
         protected void b1_Click(object sender, EventArgs e)
         {
+            int count_enrollment = 0;
+            int count_username = 0;
             if (IsReCaptchValid())
             {
-                string randomno = RandomPassword.GetRandomPassword(10) + ".jpg";
-                string path = "";
-                f1.SaveAs(Request.PhysicalApplicationPath + "/student/student_img/" + randomno.ToString());
-                path = "student/student_img." + randomno.ToString();
 
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO [student_registration] VALUES ('" + firstname.Text + "','" + lastname.Text + "','" + enrollmentno.Text + "','" +
-                    username.Text + "','" + password.Text + "','" + email.Text + "','" + contact.Text + "','" + path.ToString() + "','no')"; ;
-                cmd.ExecuteNonQuery();
+                //sql command for checking unique enrollment number
+                SqlCommand cmd1 = con.CreateCommand();
+                cmd1.CommandType = CommandType.Text;
+                cmd1.CommandText = "SELECT [Id], [firstname], [lastname], [enrollment_no], [username], [password], [email]," +
+                    "[contact], [student_img], [approved] FROM [student_registration] WHERE [enrollment_no]='" + enrollmentno.Text+"'";
+                cmd1.ExecuteNonQuery();
+                DataTable dt1 = new DataTable();
+                SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
+                da1.Fill(dt1);
+                count_enrollment = Convert.ToInt32(dt1.Rows.Count.ToString());
 
-                Response.Write("<script>alert('record inserted successfully');</script>");
+
+
+                // checking unique enrollment number
+                if (count_enrollment > 0)
+                {
+                    Response.Write("<script>alert('This enrollment number is already exist');</script>");
+                }
+                else
+                {
+                    //sql command for checking unique username
+                    SqlCommand cmd2 = con.CreateCommand();
+                    cmd1.CommandType = CommandType.Text;
+                    cmd1.CommandText = "SELECT [Id], [firstname], [lastname], [enrollment_no], [username], [password], [email]," +
+                        "[contact], [student_img], [approved] FROM [student_registration] WHERE [username]='" + username.Text + "'";
+                    cmd1.ExecuteNonQuery();
+                    DataTable dt2 = new DataTable();
+                    SqlDataAdapter da2 = new SqlDataAdapter(cmd1);
+                    da1.Fill(dt2);
+                    count_username = Convert.ToInt32(dt2.Rows.Count.ToString());
+                    string randomno = RandomPassword.GetRandomPassword(10) + ".jpg";
+                    string path = "";
+                    f1.SaveAs(Request.PhysicalApplicationPath + "/student/student_img/" + randomno.ToString());
+                    path = "student/student_img." + randomno.ToString();
+                    if (count_username > 0)
+                    {
+                        Response.Write("<script>alert('This username already exist, please try again');</script>");
+                    }
+                    else
+                    {
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "INSERT INTO [student_registration] VALUES ('" + firstname.Text + "','" + lastname.Text + "','" + enrollmentno.Text + "','" +
+                            username.Text + "','" + password.Text + "','" + email.Text + "','" + contact.Text + "','" + path.ToString() + "','no')"; ;
+                        cmd.ExecuteNonQuery();
+
+                        Response.Write("<script>alert('Record inserted successfully');</script>");
+                    }
+                }
+                
             }
             else
             {
-                lblMessage1.Text = "this is invalid";
+                lblMessage1.Text = "Invalid captcha";
             }
             
 
@@ -54,7 +95,7 @@ namespace LibraryHSE.student
         {
             var result = false;
             var captchaResponse = Request.Form["g-recaptcha-response"];
-            var secretKey = "secretkeyfromgoogle";
+            var secretKey = "6Lew3MgUAAAAAABPGN4uwXGGATu5Ga6H5aqalu4f";
             var apiUrl = "https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}";
             var requestUri = string.Format(apiUrl, secretKey, captchaResponse);
             var request = (HttpWebRequest)WebRequest.Create(requestUri);
