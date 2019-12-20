@@ -21,41 +21,30 @@ namespace LibraryHSE.librarian
             }
             con.Open();
 
-            if (Request.QueryString["id"] != null)
+            if (Request.QueryString["Id"] != null)
             {
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "";
-                cmd.ExecuteNonQuery();
-
-
+                sql_query("UPDATE [books] SET [books_video]='' WHERE Id='" + Request.QueryString["id"].ToString() + "'");
             }
             else if (Request.QueryString["id1"] != null)
             {
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "";
-                cmd.ExecuteNonQuery();
-
-
+                sql_query("UPDATE [books] SET [books_pdf]='' WHERE Id='" + Request.QueryString["id1"].ToString() + "'");
             }
 
             else
             {
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "";
-                cmd.ExecuteNonQuery();
-
-
+                sql_query("DELETE [books] WHERE Id='" + Request.QueryString["id2"].ToString() + "'");
             }
 
 
             Response.Redirect("display_all_books.aspx");
 
-
-
-
+        }
+        private void sql_query(string command)
+        {
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = command;
+            cmd.ExecuteNonQuery();
         }
     }
 }

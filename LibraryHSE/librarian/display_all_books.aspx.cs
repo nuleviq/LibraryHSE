@@ -32,26 +32,23 @@ namespace LibraryHSE.librarian
             r1.DataBind();
 
         }
-        public string checkvideo(object myvalue,object id)
+        public string checkvideo(object myvalue, object id)
         {
-            if(myvalue=="")
+            if(string.IsNullOrEmpty(myvalue.ToString()))
             {
                 return myvalue.ToString();
-
             }
 
             else
             {
                 return "<a href='delete_files.aspx?id="+ id +"' style='color:red'>delete video</a";
-
             }
         }
         public string checkpdf(object myvalue1, object id1)
         {
-            if (myvalue1 == "")
+            if (string.IsNullOrEmpty(myvalue1.ToString()))
             {
-                return myvalue1.ToString();
-
+                return myvalue1.ToString(); 
             }
 
             else
