@@ -87,7 +87,7 @@
         <asp:Label ID="lblMessage1" runat="server"></asp:Label>
                         </div>
 
-                        <asp:Button ID="b1" runat="server" class="btn btn-primary btn-flat m-b-30 m-t-30" Text="Register Now" />
+                        <asp:Button ID="b1" runat="server" class="btn btn-primary btn-flat m-b-30 m-t-30" Text="Register Now" OnClick="b1_Click" />
                        
                         
                     </form>
