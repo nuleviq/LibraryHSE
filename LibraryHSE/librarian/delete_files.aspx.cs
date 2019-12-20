@@ -21,7 +21,7 @@ namespace LibraryHSE.librarian
             }
             con.Open();
 
-            if (Request.QueryString["id"]!=null)
+            if (Request.QueryString["id"] != null)
             {
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
