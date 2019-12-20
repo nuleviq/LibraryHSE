@@ -104,7 +104,7 @@
 
                 
                 <li>
-                    <a href=""> <i class="menu-icon ti-lock"></i>Log Out</a>
+                    <a href="logout.aspx"> <i class="menu-icon ti-lock"></i>Log Out</a>
                 
 
                

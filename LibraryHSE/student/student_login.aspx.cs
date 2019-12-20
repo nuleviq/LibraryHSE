@@ -38,7 +38,8 @@ namespace LibraryHSE.student
             i = Convert.ToInt32(dataTable.Rows.Count.ToString());
             if (i > 0)
             {
-                Response.Redirect("test.aspx");
+                Session["student"] = username.Text;
+                Response.Redirect("my_issued_books.aspx");
             }
             else
             {

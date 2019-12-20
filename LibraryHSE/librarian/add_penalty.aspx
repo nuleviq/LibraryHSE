@@ -17,7 +17,7 @@
                             </div>
                             
                             <div>
-                                <asp:Button ID="b1" runat="server" class="btn btn-lg btn-info btn-block" Text="Add penalty" />
+                                <asp:Button ID="b1" runat="server" class="btn btn-lg btn-info btn-block" Text="Add penalty" OnClick="b1_Click" />
                             </div>
                             
                         </form>

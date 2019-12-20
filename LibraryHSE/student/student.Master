@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="student.master.cs" Inherits="LibraryHSE.student1.student" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="student.master.cs" Inherits="LibraryHSE.student.student" %>
 
 <!doctype html>
 <!--[if lt IE 7]>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/student1/student.Master" AutoEventWireup="true" CodeBehind="student_display_all_books.aspx.cs" Inherits="LibraryHSE.student1.student_display_all_books" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="student_display_all_books.aspx.cs" Inherits="LibraryHSE.student.student_display_all_books" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
 
     <div class="col-lg-12">

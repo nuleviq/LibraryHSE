@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/student1/student.Master" AutoEventWireup="true" CodeBehind="my_issued_books.aspx.cs" Inherits="LibraryHSE.student1.my_issued_books" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/student/student.Master" AutoEventWireup="true" CodeBehind="my_issued_books.aspx.cs" Inherits="LibraryHSE.student.my_issued_books" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
 
     <div class="breadcrumbs">
@@ -33,10 +33,10 @@
                     <td><%#Eval("books_issue_date") %></td>
                     <td><%#Eval("books_approx_return_date") %></td>
                     <td><%#Eval("student_username") %></td>
-                    <td><%#Eval("is_book_return") %></td>
-                    <td><%#Eval("books_return_date") %></td>
-                    <td><%#Eval("lateday") %></td>
-                    <th><%#Eval("penalty") %></th>
+                    <td><%#Eval("is_books_return") %></td>
+                    <td><%#Eval("books_returned_date") %></td>
+                    <td><%#Eval("latedays") %></td>
+                    
                 </tr>
             </ItemTemplate>
             
