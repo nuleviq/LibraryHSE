@@ -32,8 +32,8 @@
                               <tr>
                                   <td><img src="<%#Eval("books_image")%>" height="100" width="100"/></td>
                                   <td><%#Eval("books_title") %></td>
-                                  <td><%#Eval("books_pdf") %> </td>
-                                  <td><%#Eval("books_video") %> </td>
+                                  <td><%#Eval("books_pdf") %> <br /> <%#checkpdf(Eval("books_pdf"),Eval("id")) %></td>
+                                  <td><%#Eval("books_video") %> <br /> <%#checkvideo(Eval("books_video"),Eval("id")) %></td>
                                   <td><%#Eval("books_author_name") %></td>
                                   <td><%#Eval("books_isbn") %></td>
                                   <td><%#Eval("avaliable_qty") %></td>

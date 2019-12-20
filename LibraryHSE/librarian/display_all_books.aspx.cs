@@ -19,6 +19,7 @@ namespace LibraryHSE.librarian
                 con.Close();
             }
             con.Open();
+
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT [Id], [books_title], [books_image], [books_pdf], [books_video], [books_author_name]," +
@@ -30,6 +31,34 @@ namespace LibraryHSE.librarian
             r1.DataSource = dataTable;
             r1.DataBind();
 
+        }
+        public string checkvideo(object myvalue,object id)
+        {
+            if(myvalue=="")
+            {
+                return myvalue.ToString();
+
+            }
+
+            else
+            {
+                return "<a href='delete_files.aspx?id="+ id +"' style='color:red'>delete video</a";
+
+            }
+        }
+        public string checkpdf(object myvalue1, object id1)
+        {
+            if (myvalue1 == "")
+            {
+                return myvalue1.ToString();
+
+            }
+
+            else
+            {
+                return "<a href='delete_files.aspx?id1=" + id1 + "' style='color:red'>delete pdf</a";
+
+            }
         }
     }
 }
