@@ -24,7 +24,8 @@ namespace LibraryHSE.librarian
 
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from student_registration";
+            cmd.CommandText = "SELECT [Id], [firstname], [lastname], [enrollment_no], [username], [password], [email]," +
+                        "[contact], [student_img], [approved] FROM [student_registration]";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

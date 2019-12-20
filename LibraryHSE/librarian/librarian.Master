@@ -68,7 +68,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Student</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-user"></i><a href="display_student_info">Display Student</a></li>
+                        <li><i class="fa fa-user"></i><a href="display_student_info.aspx">Display Student</a></li>
                         
                     </ul>
                 </li>
@@ -104,7 +104,7 @@
 
                 
                 <li>
-                    <a href="logout.aspx"> <i class="menu-icon ti-lock"></i>Log Out</a>
+                    <a href=""> <i class="menu-icon ti-lock"></i>Log Out</a>
                 
 
                

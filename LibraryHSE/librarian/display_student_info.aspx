@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/librarian/librarian.Master" AutoEventWireup="true" CodeBehind="display_student_info.aspx.cs" Inherits="LibraryHSE.librarian.display_student_info" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/librarian/librarian.Master" AutoEventWireup="true" CodeBehind="display_student_info.aspx.cs" Inherits="LibraryHSE.librarian.display_student_info" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="c1" runat="server">
 
     <link href="https://cdn.datatables.net/1.10.19/css/iquery.dataTables.min.css" type="text/css" rel="stylesheet" />
