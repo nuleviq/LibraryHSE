@@ -26,7 +26,7 @@ namespace LibraryHSE.librarian
 
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update student_registration set approved='yes' where id="+id+"";
+            cmd.CommandText = "update [student_registration] set [approved]='yes' where [id]="+id+"";
             cmd.ExecuteNonQuery();
 
             Response.Redirect("display_student_info.aspx");
