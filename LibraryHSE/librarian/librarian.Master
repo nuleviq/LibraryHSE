@@ -53,15 +53,13 @@
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                </li>
+                
                 <h3 class="menu-title">Menu</h3><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Books</a>
+                       aria-expanded="false"> <i class="menu-icon fa fa-book"></i>Book</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-book"></i><a href="add_books.aspx">Add Books</a></li>
+                        <li><i class="fa fa-book"></i><a href="add_books.aspx">Add Book</a></li>
                         <li><i class="fa fa-book"></i><a href="display_all_books.aspx">Display Books</a></li>
                         
                     </ul>
@@ -75,6 +73,32 @@
                     </ul>
                 </li>
                 
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Penalty</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-user"></i><a href="add_penalty.aspx">Add penalty</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Issue books</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-user"></i><a href="issue_books.aspx">Issue books</a></li>
+                        
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Return books</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-user"></i><a href="return_books.aspx">Return books</a></li>
+                        
+                    </ul>
+                </li>
 
                
 

@@ -52,7 +52,8 @@
                             <asp:TextBox ID="password" runat="server" class="form-control" placeholder="password" TextMode="Password"></asp:TextBox>
                         </div>
                         
-                        <asp:Button ID="b1" runat="server" Text="Sign in" class="btn btn-success btn-flat m-b-30 m-t-30" ></asp:Button>
+                        <asp:Button ID="b1" runat="server" Text="Sign in" class="btn btn-success btn-flat m-b-30 m-t-30"  ></asp:Button><br />
+                        <center><a href="student_registration.aspx">Register now!</a></center>
 
                         <div class="alert alert-warning" role="alert" style="margin-top:15px; display:none" id="error" runat="server">
                             Invalid username or password!

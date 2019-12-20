@@ -45,9 +45,6 @@
                             <div class="alert alert-success" role="alert" style="margin-top: 15px; display: none" id="msg" runat="server">
                                 Books succesfully added!
                             </div>
-                            <div class="alert alert-warning" role="alert" style="margin-top:15px; display:none" id="error" runat="server">
-                                Add image pls
-                            </div> 
                         </form>
                     </div>
                 </div>
