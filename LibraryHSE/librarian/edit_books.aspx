@@ -25,13 +25,13 @@
                                       <div class="form-group">
                                           <label for="" class="control-label mb-1">Books Pdf</label><br />
                                           <asp:Label ID="bookspdf" runat="server" Text=""></asp:Label>
-                                          <asp:FileUpload ID="FileUpload1" runat="server" class="form-control"/>
+                                          <asp:FileUpload ID="f2" runat="server" class="form-control"/>
                                       </div>
 
                                       <div class="form-group">
                                           <label for="" class="control-label mb-1">Books Video</label><br />
                                           <asp:Label ID="booksvideo" runat="server" Text=""></asp:Label>
-                                          <asp:FileUpload ID="FileUpload2" runat="server" class="form-control"/>
+                                          <asp:FileUpload ID="f3" runat="server" class="form-control"/>
                                       </div>
                                      
                                       <div class="form-group">
