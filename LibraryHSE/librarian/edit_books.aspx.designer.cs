@@ -24,22 +24,22 @@ namespace LibraryHSE.librarian
         protected global::System.Web.UI.HtmlControls.HtmlForm fo1;
 
         /// <summary>
-        /// bookstitle control.
+        /// booktitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bookstitle;
+        protected global::System.Web.UI.WebControls.TextBox booktitle;
 
         /// <summary>
-        /// booksimage control.
+        /// bookimage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label booksimage;
+        protected global::System.Web.UI.WebControls.Label bookimage;
 
         /// <summary>
         /// f1 control.
@@ -51,40 +51,40 @@ namespace LibraryHSE.librarian
         protected global::System.Web.UI.WebControls.FileUpload f1;
 
         /// <summary>
-        /// bookspdf control.
+        /// bookpdf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label bookspdf;
+        protected global::System.Web.UI.WebControls.Label bookpdf;
 
         /// <summary>
-        /// FileUpload1 control.
+        /// f2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload f2;
 
         /// <summary>
-        /// booksvideo control.
+        /// bookvideo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label booksvideo;
+        protected global::System.Web.UI.WebControls.Label bookvideo;
 
         /// <summary>
-        /// FileUpload2 control.
+        /// f3  control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload2;
+        protected global::System.Web.UI.WebControls.FileUpload f3;
 
         /// <summary>
         /// authorname control.
@@ -105,13 +105,13 @@ namespace LibraryHSE.librarian
         protected global::System.Web.UI.WebControls.TextBox isbn;
 
         /// <summary>
-        /// qty control.
+        /// quantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox qty;
+        protected global::System.Web.UI.WebControls.TextBox quantity;
 
         /// <summary>
         /// b1 control.
