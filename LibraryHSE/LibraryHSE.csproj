@@ -1907,6 +1907,8 @@
     <Content Include="student\logout.aspx" />
     <Content Include="student\my_issued_books.aspx" />
     <Content Include="student\student_display_all_books.aspx" />
+    <Content Include="student\student_img\lfEReKPMpC.jpg" />
+    <Content Include="student\student_img\V7n4bdTfq9.jpg" />
     <Content Include="student\student_login.aspx" />
     <Content Include="student\student_registration.aspx" />
     <Content Include="Web.config" />
@@ -2492,7 +2494,6 @@
   <ItemGroup>
     <Folder Include="librarian\books_pdf\" />
     <Folder Include="librarian\books_videos\" />
-    <Folder Include="student\student_img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

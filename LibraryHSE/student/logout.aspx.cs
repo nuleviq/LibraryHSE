@@ -13,7 +13,6 @@ namespace LibraryHSE.student
         {
             Session.Clear();
             Response.Redirect("student_login.aspx");
-
         }
     }
 }

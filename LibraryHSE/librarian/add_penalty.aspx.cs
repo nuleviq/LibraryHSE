@@ -25,7 +25,7 @@ namespace LibraryHSE.librarian
 
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "";
+            cmd.CommandText = "UPDATE [penalty] SET penalty='";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

@@ -39,7 +39,7 @@ namespace LibraryHSE.student
             if (i > 0)
             {
                 Session["student"] = username.Text;
-                Response.Redirect("my_issued_books.aspx");
+                Response.Redirect("student_display_all_books.aspx");
             }
             else
             {

@@ -65,7 +65,7 @@ namespace LibraryHSE.student
                     string randomno = RandomPassword.GetRandomPassword(10) + ".jpg";
                     string path = "";
                     f1.SaveAs(Request.PhysicalApplicationPath + "/student/student_img/" + randomno.ToString());
-                    path = "student/student_img." + randomno.ToString();
+                    path = "student/student_img" + randomno.ToString();
                     if (count_username > 0)
                     {
                         Response.Write("<script>alert('This username already exist, please try again');</script>");
