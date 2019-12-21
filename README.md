@@ -21,6 +21,7 @@ CREATE TABLE [dbo].[books] (
     [avaliable_qty]     VARCHAR (50)  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
 CREATE TABLE [dbo].[issue_books] (
     [Id]                       INT          IDENTITY (1, 1) NOT NULL,
     [student_enrollment_no]    VARCHAR (50) NULL,
@@ -32,6 +33,7 @@ CREATE TABLE [dbo].[issue_books] (
     [books_returned_date]      VARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
 CREATE TABLE [dbo].[librarian_registration] (
     [id]        INT          IDENTITY (1, 1) NOT NULL,
     [firstname] NCHAR (50)   NULL,
@@ -42,6 +44,7 @@ CREATE TABLE [dbo].[librarian_registration] (
     [contact]   VARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([id] ASC)
 );
+
 CREATE TABLE [dbo].[penalty] (
     [Id]      INT          IDENTITY (1, 1) NOT NULL,
     [penalty] VARCHAR (50) NULL,
