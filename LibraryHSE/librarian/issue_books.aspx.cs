@@ -71,7 +71,7 @@ namespace LibraryHSE.librarian
                 cmd0.CommandType = CommandType.Text;
                 cmd0.CommandText = "SELECT [Id], [student_enrollment_no], [books_isbn], [books_issue_date]," +
                 " [books_approx_return_date], [student_username], [is_books_return]," +
-                        "[books_returned_date] FROM [issue_books] where [student_enrollment_no]='" + enrno.SelectedItem.ToString() + "' and [books_isbn]'" + isbn.SelectedItem.ToString() + "' and [is_books_retirn]='no'";
+                        "[books_returned_date] FROM [issue_books] where [student_enrollment_no]='" + enrno.SelectedItem.ToString() + "' and [books_isbn]='" + isbn.SelectedItem.ToString() + "' and [is_books_return]='no'";
                 cmd0.ExecuteNonQuery();
                 DataTable dt0 = new DataTable();
                 SqlDataAdapter da0 = new SqlDataAdapter(cmd0);
@@ -121,7 +121,7 @@ namespace LibraryHSE.librarian
 
                         SqlCommand cmd4 = con.CreateCommand();
                         cmd4.CommandType = CommandType.Text;
-                        cmd4.CommandText = "update [books] set available_qty-1 where [books_isbn]='" + isbn.SelectedItem.ToString() + "'";
+                        cmd4.CommandText = "update [books] set [available_qty]-1 where [books_isbn]='" + isbn.SelectedItem.ToString() + "'";
                         cmd4.ExecuteNonQuery();
                         Response.Write("<script>alert('books issues successfully'); window.location.href=window.location.href;</script>");
                     }
@@ -141,7 +141,8 @@ namespace LibraryHSE.librarian
 
             SqlCommand cmd2 = con.CreateCommand();
             cmd2.CommandType = CommandType.Text;
-            cmd2.CommandText = "select * from books where books_isbn ='"+ isbn.SelectedItem.ToString() +"'";
+            cmd2.CommandText = "select [Id],[books_title],[books_image],[books_pdf]," +
+                "[books_video], [books_author_name], [books_isbn], [avaliable_qty] from books where [books_isbn] ='"+ isbn.SelectedItem.ToString() +"'";
             cmd2.ExecuteNonQuery();
             DataTable dt2 = new DataTable();
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
@@ -150,7 +151,7 @@ namespace LibraryHSE.librarian
             {
                 i1.ImageUrl = dr2["books_image"].ToString();
                 booksname.Text = dr2["books_title"].ToString();
-                instock.Text = dr2["available_qty"].ToString();
+                instock.Text = dr2["avaliable_qty"].ToString();
 
             }
 

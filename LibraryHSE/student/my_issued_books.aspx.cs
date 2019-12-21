@@ -12,6 +12,9 @@ namespace LibraryHSE.student
     public partial class my_issued_books : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\lms.mdf;Integrated Security=True");
+        string penalty = "0";
+        double late = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Open)
@@ -24,8 +27,20 @@ namespace LibraryHSE.student
                 Response.Redirect("student_login.aspx");
             }
 
-            // this is for temporary database
-            DataTable dt = new DataTable();
+            SqlCommand cmd2 = con.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "SELECT [Id], [penalty] FROM [penalty]";
+            cmd2.ExecuteNonQuery();
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            da2.Fill(dt2);
+            foreach (DataRow dr2 in dt2.Rows)
+            {
+                penalty = dr2["penalty"].ToString();
+            }
+
+                // this is for temporary database
+                DataTable dt = new DataTable();
             dt.Clear();
             dt.Columns.Add("student_enrollment_no");
             dt.Columns.Add("books_isbn");
@@ -35,6 +50,7 @@ namespace LibraryHSE.student
             dt.Columns.Add("is_books_return");
             dt.Columns.Add("books_returned_date");
             dt.Columns.Add("latedays");
+            dt.Columns.Add("penalty");
 
 
             SqlCommand cmd = con.CreateCommand();
@@ -64,13 +80,15 @@ namespace LibraryHSE.student
                 if (d1 > d2)
                 {
                     TimeSpan t = d1 - d2;
-                    double late = t.TotalDays;
+                    late = t.TotalDays;
                     dr["latedays"] = late.ToString();
                 }
                 else
                 {
                     dr["latedays"] = "0";
                 }
+
+                dr["penalty"] = Convert.ToString(Convert.ToDouble(late)* Convert.ToDouble(penalty));
 
                 dt.Rows.Add(dr);
             }
